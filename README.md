@@ -45,7 +45,7 @@ pip install nvcc4jupyter
 ```
 ## With memSets:
 ```
-%%cuda
+%%writefile mem.cu
 #include <cuda_runtime.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -350,10 +350,13 @@ int main(int argc, char **argv)
 
     return (0);
 }
+!nvcc -o mem mem.cu
+!./mem
+!nvprof ./mem
 ```
 ## without memsets:
 ```
-%%cuda
+%%writefile wmem.cu
 #include <cuda_runtime.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -653,17 +656,22 @@ int main(int argc, char **argv)
 
     return (0);
 }
+!nvcc -o wmem wmem.cu
+!./wmem
+!nvprof ./wmem
 ```
 
 
 ## OUTPUT:
 ## with memsets:
-![image](https://github.com/Rakshithadevi/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165326/3202f45c-7316-4559-8f79-407f275fe99c)
+![image](https://github.com/Rakshithadevi/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165326/707181b2-132a-45bc-84db-f7fad67ddf7a)
+
 
 ## without memsets:
 
-![image](https://github.com/Rakshithadevi/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165326/a81dda5e-f69a-44b9-9fc1-770be7470c5e)
+![image](https://github.com/Rakshithadevi/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165326/6f9a987b-730e-422f-9ca6-824a1c4c75b4)
+
 
 
 ## RESULT:
-Thus the program has been executed by using unified memory. It is observed that removing memset function has given less/more 0.01 time.
+Thus the program has been executed by using unified memory. It is observed that removing memset function has given less/more 0.017889 (0.1)sectime.
