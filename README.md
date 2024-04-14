@@ -1,6 +1,7 @@
 # PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY AY 23-24
 
- 
+## MATRIX ADDITION WITH UNIFIED MEMORY
+Refer to the program sumMatrixGPUManaged.cu. Would removing the memsets below affect performance? If you can, check performance with nvprof or nvvp.
 
 ## AIM:
 To perform Matrix addition with unified memory and check its performance with nvprof.
