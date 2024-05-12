@@ -665,7 +665,7 @@ int main(int argc, char **argv)
 
 ## OUTPUT:
 ## with memsets:
-![image](https://github.com/Rakshithadevi/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165326/707181b2-132a-45bc-84db-f7fad67ddf7a)
+![image](https://github.com/Rakshithadevi/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165326/969ca68b-d687-4006-938c-e3acbb1ca6d1)
 
 
 ## without memsets:
